@@ -1,9 +1,7 @@
 var assert = require('assert');
 var EventEmitter = require('events').EventEmitter;
-var url = require('url');
 var util = require('util');
 
-var clone = require('clone');
 var WebSocket = require('ws');
 var vasync = require('vasync');
 
