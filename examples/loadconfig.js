@@ -13,14 +13,14 @@ function loadconfig(needed) {
     config = fs.readFileSync(file, 'utf8');
   } catch (e) {
     console.error('[ERROR] error reading config file, try copying `config.json.dist`');
-    throw err;
+    throw e;
   }
 
   try {
     config = JSON.parse(config);
   } catch (e) {
     console.error('[ERROR] failed to parse config file');
-    throw err;
+    throw e;
   }
 
   needed.forEach(function (need) {
