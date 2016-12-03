@@ -1,6 +1,6 @@
 {
   "name": "pushover-open-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Pushover Open Client",
   "main": "pushover-open-client.js",
   "directories": {
