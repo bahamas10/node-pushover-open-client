@@ -147,7 +147,9 @@ PushoverOpenClient.prototype.fetchAndDeleteMessages = function fetchEmitDeleteMe
 
     var messages = [];
     var highest;
-    body.messages.forEach(function (message) {
+    body.messages.sort(function (a, b) {
+      return a.date < b.date ? -1 : 1;
+    }).forEach(function (message) {
       if (highest === undefined)
         highest = message.id;
       else
